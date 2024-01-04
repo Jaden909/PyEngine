@@ -22,9 +22,7 @@ An example of these functions:
 ### The `autoWrap()` function
 Rendering font using pygame has one downside: there is no support for multi-line rendering, unless you split the text up yourself. With PyEngine's `autoWrap()` fucntion, you can turn a string into as many lines as you need, depending on the given `width` parameter
 ```python
-i=0
 lines=PyEngine.autoWrap('Long string to really test this functions mullti-line capabillities',50,pygame.font.SysFont('arial',12),'white')
 for line in lines:
-    screen.blit(line,(32,i*32)) #Will blit each line of text 32 pixels vertically away from each other
-    i+=1
+    surface.blit(line,(32,line.index()*32)) #Will blit each line of text 32 pixels vertically away from each other
 ```
